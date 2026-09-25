@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WEB-01 Smart Campus Issue Management
 
-## Getting Started
+## 🏫 Hackathon Project
 
-First, run the development server:
+### Problem Statement
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**WEB-01 – Smart Campus Issue Management**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+In a college campus, students frequently face problems such as Wi-Fi failures, electrical issues, water leakage, classroom maintenance problems, and other infrastructure-related issues.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Currently, reporting and tracking these issues can be difficult because complaints may be communicated verbally or through informal channels. This can lead to:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Delayed issue reporting
+- Difficulty in tracking complaint status
+- Lack of transparency for students
+- Difficulty for administrators to manage multiple complaints
+- No centralized system for monitoring campus issues
 
-## Learn More
+### Proposed Solution
 
-To learn more about Next.js, take a look at the following resources:
+**Smart Campus Issue Management** is a web-based platform that provides a centralized system for students and administrators to report, manage, track, and resolve campus issues.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Students can submit complaints with details such as:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Issue title
+- Category
+- Location
+- Description
+- Priority
 
-## Deploy on Vercel
+Administrators can view reported issues, filter and search complaints, and update the issue status.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Key Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- 📝 Student Issue Reporting
+- 📍 Issue Location Tracking
+- 🏷️ Issue Category & Priority
+- 🔄 Issue Status Management
+- 🔎 Search and Filter Issues
+- 📊 Admin Dashboard
+- 👨‍🎓 Student Portal
+- 💾 Centralized Issue Data Management
+
+---
+
+## 🏗️ System Architecture / Flow Chart
+
+```mermaid
+flowchart TD
+    A[Student] --> B[Student Portal]
+
+    B --> C[Report Campus Issue]
+
+    C --> D[Issue Details]
+    D --> D1[Title]
+    D --> D2[Category]
+    D --> D3[Location]
+    D --> D4[Description]
+    D --> D5[Priority]
+
+    D1 --> E[Issue Management System]
+    D2 --> E
+    D3 --> E
+    D4 --> E
+    D5 --> E
+
+    E --> F[Admin Dashboard]
+
+    F --> G[View Issues]
+    F --> H[Search & Filter]
+    F --> I[Update Issue Status]
+
+    I --> J[Pending]
+    I --> K[In Progress]
+    I --> L[Resolved]
+
+    J --> M[Student Portal]
+    K --> M
+    L --> M
+
+    M --> N[Student Can Track Issue Status]
+
+## 👥 Team Details
+
+**Team Name:** Tech Titans
+
+**Team Members:**
+- Naseem Khan R
+- Jeevan K
+
+**College:** SNS College of Technology
